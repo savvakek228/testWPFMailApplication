@@ -1,0 +1,17 @@
+﻿<Window x:Class="TestApp.TransitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestApp"
+        mc:Ignorable="d"
+        Title="TransitWindow" Height="450" Width="800" Icon="Звезда.jpg">
+    <Window.Background>
+        <ImageBrush ImageSource="Камуфляж.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Button Content="Новое сообщение" HorizontalAlignment="Stretch" Height="77" Margin="178,92,176,0" VerticalAlignment="Top" Width="auto" Click="NewMessage_Click"/>
+        <Button Content="Bходящие сообщения" HorizontalAlignment="Stretch" Height="77" Margin="178,199,176,0" VerticalAlignment="Top" Width="auto" Click="MessagesLog_Click"/>
+
+    </Grid>
+</Window>
