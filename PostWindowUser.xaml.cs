@@ -60,6 +60,7 @@ namespace TestApp
             Close();
             transitWindow.Show();
         }
+
     }
 }
 

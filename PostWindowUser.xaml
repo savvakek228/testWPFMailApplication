@@ -21,14 +21,12 @@
         </Grid.RowDefinitions>
 
         <Button Name="btnSendEmail"  Grid.Column="1" Grid.Row="1" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="auto" Click="btnSendEmail_Click">Отправить письмо</Button>
-        
-        
+
+
         <StackPanel Name="stackPanel1" >
             <Label Height="28" Name="label1" Width="auto" HorizontalAlignment="Right" Foreground="#FFFFFBFB">Почтовый ящик:</Label>
             <Label Height="28" Name="label2" Width="auto" HorizontalAlignment="Right" Foreground="#FFFFFDFD">Пароль:</Label>
             <Label Height="28" Name="label3" Width="auto" HorizontalAlignment="Right" Foreground="White">Ящик получателя:</Label>
-            <Label Height="28" Name="label4" Width="auto" HorizontalAlignment="Right" Foreground="White">Имя SMTP сервера:</Label>
-            <Label Height="28" Name="label5" Width="auto" HorizontalAlignment="Right" Foreground="White">Порт SMTP сервера:</Label>
             <Label Height="28" Name="label6" Width="auto" HorizontalAlignment="Right" Foreground="White">Тема письма:</Label>
             <Label Height="52" Name="label7" Width="auto" HorizontalAlignment="Right" Foreground="White">Текст:</Label>
 
@@ -37,12 +35,16 @@
             <TextBox Height="20" Name="txtUserName" Width="auto" Margin="0,6,6,3" ToolTip="Пример: yourmail@gmail.com" Background="#FF948888" />
             <PasswordBox Height="20" Name="txtPassword" Width="auto" Margin="0,3,6,3" PasswordChar="*" ToolTip="Ваш пароль" Background="#FF948888" />
             <TextBox Height="20" Name="txtTo" Width="auto" Margin="0,6,6,3" ToolTip="Пример: SendTo@yahoo.com" Background="#FF948888" />
-            <TextBox Height="20" Name="txtSMTPServerName" Width="auto" Margin="0,5,6,3" ToolTip="Пример: smtp.gmail.com" Background="#FF948888" />
-            <TextBox Height="20" Name="txtSMTPPortNumber" Width="auto" Margin="0,3,6,3" ToolTip="Пример: для gmail порт 587" Background="#FF948888" />
             <TextBox Height="20" Name="txtSubject" Width="auto" Margin="0,5,6,3" ToolTip="Тема письма!" Background="#FF948888" />
             <TextBox Height="53" Name="txtBody" Width="auto" Margin="0,3,6,6"
                      TextWrapping="Wrap" ToolTip="Здесь вводится текст письма!" Background="#FF948888" />
-            <Button Height="22" Name="BackBtn" Content="Назад" Width="auto" Click="BackBtn_Click"></Button>
+            <Button Height="22" Name="BackBtn" Content="Назад" Width="auto" Click="BackBtn_Click" Margin="0,0,6,0"></Button>
+            <StackPanel HorizontalAlignment="Left" Height="28" Width="434" Name="StackPanel3" Orientation="Horizontal">
+                <Label Foreground="White">SMTP-сервер:</Label>
+                <TextBox Name="txtSMTP" TextWrapping="Wrap" Background="#FF948888" Width="129"></TextBox>
+                <Label Foreground="White">Порт:</Label>
+                <TextBox Name="txtSMTPPort" Width="182" Background="#FF948888"></TextBox>
+            </StackPanel>
 
         </StackPanel>
         <!--<Button Grid.Column="1" Margin="78,0,0,0" Name="btnCancel" Grid.Row="1" HorizontalAlignment="Left" Width="74" Height="23" VerticalAlignment="Top" Click="btnCancel_Click">Отмена</Button>-->

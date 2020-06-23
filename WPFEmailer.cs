@@ -5,6 +5,9 @@ using System.Net;
 
 namespace TestApp
 {
+    /// <summary>
+    /// Класс объекта сообщения почты
+    /// </summary>
     class WPFEmailer
     {
         enum SendUsing
@@ -23,9 +26,9 @@ namespace TestApp
         static WPFEmailer EmailerInstance;
         public readonly string Host = "127.0.0.1";
         public readonly int Port = 25;
-        bool IsHtml = false;
+        const bool IsHtml = false;//заглушка, может потом подвяжу протоколы
         SendUsing sendMethod = SendUsing.Network;
-        bool UseSSL = true;
+        const bool UseSSL = true;//заглушка для шифрования
         AuthenticationMode authMode = AuthenticationMode.PlainText;
 
         public static WPFEmailer getEmailerInstance(string from, string to, string user, string password, string subject, string body)
@@ -49,7 +52,7 @@ namespace TestApp
             await Task.Run(() => SendMessage());
         }
         /// <summary>
-        /// Send Email Message method.
+        /// Send Email Message method
         /// </summary>
         private void SendMessage()
         {
