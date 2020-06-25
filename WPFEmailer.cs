@@ -6,7 +6,7 @@ using System.Net;
 namespace TestApp
 {
     /// <summary>
-    /// Класс объекта сообщения почты
+    /// Класс объекта сообщения почты(синглтон)
     /// </summary>
     class WPFEmailer
     {

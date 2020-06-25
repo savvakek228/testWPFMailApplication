@@ -50,6 +50,7 @@ namespace TestApp
             using (var UDContext = new UserDataContext())
             {
                 UserData user = new UserData(ID++, LoginTextBox.Text, PasswordTextBox.Password.GetHashCode());
+                //UDContext.Find() подходит или нет - проверить
                 bool queryResLogin = await UDContext.userDatas.AnyAsync(x => x.Login == user.Login);
                 bool queryResPassword = await UDContext.userDatas.AnyAsync(y => y.PasswordHashCode == user.PasswordHashCode);
                 if (queryResLogin && queryResPassword)
