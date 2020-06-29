@@ -23,7 +23,5 @@ namespace TestApp
 
         public MessageData()
         {}
-           
-
     }
 }

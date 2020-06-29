@@ -11,9 +11,9 @@ namespace TestApp
     {
         [Key]
         public int ID { get; set; }
-
         public string Login { get; set; }
         public int PasswordHashCode { get; set; }   
+
         public UserData(int Id, string login, int passwordHash)
         {
             ID = Id;

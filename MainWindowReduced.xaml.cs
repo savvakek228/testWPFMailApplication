@@ -23,7 +23,7 @@ namespace TestApp
     /// </summary>
     public partial class MainWindowReduced : Window
     {
-        public int ID = 0;
+        public int ID = 0;//аналогично MainWindow
         public MainWindowReduced()
         {
             InitializeComponent();
